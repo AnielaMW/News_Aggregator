@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Slacking Off Articles</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>Slacking Off Articles</h1>
+    <h2>All the news that's fit to be distracted by.</h2>
+    <ul>
+      <% @articles.each do |article| %>
+        <li><h3><%= article[0] %></h3>
+          <p><%= article[2] %></p>
+          <h4><a href="<%= article[1] %>" target="blank"><%= article[1] %></a></h4>
+        </li>
+      <% end %>
+    </ul>
+
+    <p><a href="/articles/new">Post New Articles</a></p>
+  </body>
+</html>
